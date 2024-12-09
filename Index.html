@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu com Destaque</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilização geral */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Menu no topo */
+        .menu {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            transition: background-color 0.3s;
+        }
+
+        .menu a.active {
+            background-color: #0077cc;
+            border-radius: 5px;
+        }
+
+        .menu a:hover {
+            background-color: #555;
+        }
+
+        /* Conteúdo principal */
+        .section {
+            padding: 40px 20px 20px 20px;
+            min-height: 80vh;
+            text-align: justify;
+            position: relative;
+        }
+
+        .section:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #0077cc;
+        }
+
+        /* Estilização de cores das seções */
+        #section1 { background-color: #ebf0f4; }
+        #section2 { background-color: #ebf0f4; }
+        #section3 { background-color: #ebf0f4; }
+        #section4 { background-color: #ebf0f4; }
+
+        /* Formulário de Contato */
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #4b10d4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #005bb5;
+        }
+    </style>
+</head>
+<body>
+    <!-- Menu -->
+    <div class="menu">
+        <a href="#section1" class="active">Sobre mim</a>
+        <a href="#section2">Formação</a>
+        <a href="#section3">Portfólio</a>
+        <a href="#section4">Contato</a>
+    </div>
+
+    <!-- Seções -->
+    <div id="section1" class="section">
+        <h1>Sobre mim</h1>
+        <p>Profissional diversificado de planejamento tendo atuado em projetos multidisciplinares, 
+            com expertise na combinação de análise de dados profunda e gerenciamento de projetos de capital.</p>
+        <p>Perfil agregador, com excelente comunicação. Habilidade para desenvolvimento, 
+            contribuição e liderança de trabalhos em equipe. Obsessão em aprendizagem permanente, sempre em busca de novas tecnologias e suas aplicações na geração de valor. Vocação para compartilhar conhecimentos e contribuir com a aquisição de novas habilidades para pessoas.</p>
+        <p>Especialista em plataformas BIM (building information modeling) como PDS, PDMS e Revit 
+            e na integração destas plataformas com ferramentas de Business Intelligence (BI) e com softwares de gerenciamento de projetos como MS Project, Primavera e ERP’s específicos de cada empresa com foco em custos, antecipação de erros e integração de processos produtivos.</p>
+        <p>Conhecimento sólido (hands on) em desenvolvimento de produtos, prototipagem digital 3D e dos 
+            principais métodos de manufatura auxiliada por computador. Expertise em softwares do ciclo CAD-CAE-CAM-CAPP, Programação CNC e Impressão 3D.</p>
+    </div>
+
+
+    <div id="section2" class="section">
+        <h1>Formação</h1>
+        <p><strong>Jornalismo - Universidade Federal do Espírito Santo</strong></p>
+        <p></p>Participação em projetos de pesquisa e extensão, 
+        apoio a projetos comunitários e desenvolvimento de habilidades de comunicação e informação.</p>
+        <p><strong>Eletrotécnica - SENAI</strong></p>
+        <p>Especialização em desenvolvimento, projeto e produção de sistemas 
+        de comandos elétricos para indústria, desenvolvimento e projeto de motores e transformadores elétricos e eletrônica industrial.</p>
+    </div>
+
+    <div id="section3" class="section">
+        <h1>Portfólio</h1>
+        <p><strong>ARCADIS - Owners Engineering:</strong></p>
+        <p>Atuação no projeto de implantação da Termelétrica Novo Tempo Barcarena como consultor de 
+        planejamento. Responsável por análises e relatórios detalhados (BI) e gerenciais em português e inglês para stakeholders globais. Implantou ferramentas de machine learning para análise preditiva, mitigação de riscos e identificação de desvios. Contribuiu de forma proativa na estratégia anti-claim e na garantia do cumprimento de prazos.</p>
+        <p><strong>ICN - Itaguaí Construções Navais:</strong></p>
+        <p>Participação no programa de construção de submarinos da Marinha do Brasil, 
+        envolvendo planejamento estratégico, análise de desvios e produtividade, e otimização de prazos e custos. Liderou melhorias operacionais com o uso de BI, automação de sistemas ERP com P6 e desenvolvimento de relatórios interativos, aprimorando processos e tomada de decisão.</p>
+        <p><strong>Odebrecht:</strong></p>
+        <p>Atuou no planejamento executivo multidisciplinar da construção das plantas da Refinaria Abreu e 
+        Lima, sendo responsável pela gestão de cronogramas, monitoramento de KPIs e soluções para produtividade. Liderou a equipe de planejamento nas fases finais do projeto, garantindo o cumprimento de prazos e metas.</p>
+
+    </div>
+
+    <div id="section4" class="section">
+        <h1>Contato</h1>
+        <form>
+            <input type="text" placeholder="Nome" required>
+            <input type="email" placeholder="E-mail" required>
+            <textarea placeholder="Mensagem" rows="5" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener("scroll", () => {
+          const sections = document.querySelectorAll(".section");
+          const menuLinks = document.querySelectorAll(".menu a");
+      
+          let currentSection = null;
+      
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop - 60; // Ajusta a margem para o menu fixo
+            const sectionBottom = sectionTop + section.offsetHeight;
+      
+            if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+              currentSection = section.getAttribute("id");
+            }
+          });
+      
+          menuLinks.forEach((link) => {
+            link.classList.remove("active");
+            if (link.getAttribute("href").substring(1) === currentSection) {
+              link.classList.add("active");
+            }
+          });
+        });
+      </script>      
+</body>
+</html>
